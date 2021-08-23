@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.mapsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+
+  img {
+    width: 1500px;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-top: -430px;
+    // height: 130vh;
+  }
+}
+.mapsWrapper {
+  position: fixed;
+  z-index: 999;
+  max-width: 100%;
+  margin: 0 auto;
+  img {
+    margin-top: 60px;
+    margin-left: 500px;
+
+    color: red;
+  }
+}
