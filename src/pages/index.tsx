@@ -1,8 +1,8 @@
 import { GetServerSideProps } from "next";
-import dynamic from "next/dynamic";
+
 import Head from "next/head";
-import Link from "next/link";
-const Map = dynamic(() => import("../components/Maps"), { ssr: false });
+import "leaflet/dist/leaflet.css";
+import Image from "next/image";
 import { EnterButton } from "../components/EnterButton";
 import styles from "./home.module.scss";
 
@@ -14,7 +14,6 @@ export const getAllUsers = async () => {
   return users;
 };
 export default function Home(props) {
-  console.log(props.cases);
   return (
     <>
       <Head>
@@ -34,9 +33,52 @@ export default function Home(props) {
 
           <EnterButton />
         </section>
-        <img src="/images/avatar.svg" alt="Covid imagem" />
+        <Image
+          src="/images/avatar.svg"
+          alt="Covid imagem"
+          width={100}
+          height={100}
+        />
       </main>
-      <Map />
+      <section className={styles.sintomas}>
+        <div className={styles.sintomasDiv}>
+          <div className={styles.sintomasBox}>
+            <h1>
+              quais são os principais <br /> <span>sintomas ?</span>
+            </h1>
+            <p>
+              O vírus COVID-19 afeta pessoas diferentes de maneiras diferentes
+              <br />
+              COVID-19 é uma doença respiratória.
+            </p>
+            <div className={styles.lista}>
+              <div>
+                {" "}
+                <ul>
+                  <li>Febre</li>
+                  <li>Cansaço</li>
+                  <li>Tosse seca</li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li>Falta de ar</li>
+                  <li>Dores</li>
+                  <li>Dor de garganta</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <Image
+            src="/images/temperatura.svg"
+            alt="Covid imagem"
+            className="imageSintomas"
+            width={380}
+            height={380}
+          />
+        </div>
+      </section>
     </>
   );
 }

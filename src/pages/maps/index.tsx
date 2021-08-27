@@ -1,14 +1,17 @@
-import styles from "./styles.module.scss";
-import Link from "next/link";
-export default function EnterButton() {
-  return (
-    <div className={styles.Container}>
-      <div className={styles.mapsWrapper}>
-        <img src="/images/mapointer.svg" alt="covid-maps" />
-      </div>
-      <div className={styles.mapsContainer}>
-        <img src="/images/g6.svg" alt="covid-maps" />
-      </div>
-    </div>
-  );
+import HomeTemplate from "../../templates/Home";
+import { MapProps } from "../../components/Maps";
+import { GET_PLACES } from "../../graphql/queries";
+import client from "../../graphql/client";
+import { GetPlacesQuery } from "../../graphql/generated/graphql";
+export default function Home({ places }: MapProps) {
+  return <HomeTemplate places={places} />;
 }
+
+export const getStaticProps = async () => {
+  const { places } = await client.request<GetPlacesQuery>(GET_PLACES);
+  return {
+    props: {
+      places,
+    },
+  };
+};

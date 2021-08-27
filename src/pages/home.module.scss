@@ -42,3 +42,161 @@
     margin-top: 2.5rem;
   }
 }
+
+@media (max-width: 900px) {
+  .contentContainer {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0.2rem;
+    height: calc(100vh -5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      max-width: 100%;
+      width: 610px;
+      height: 550px;
+    }
+
+    .hero {
+      max-width: 600px;
+
+      > span {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      h1 {
+        font-size: 4.1rem;
+        line-height: 4.5rem;
+        font-weight: 900;
+        margin-top: 2.5rem;
+      }
+      span {
+        color: var(--yellow-500);
+      }
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 2.25rem;
+      margin-top: 1.5rem;
+      span {
+        color: var(--cyan-500);
+        font-weight: bold;
+      }
+    }
+    button {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.sintomas {
+  display: flex;
+  padding: 0.6rem;
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 70vh;
+}
+
+.sintomasDiv {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  height: 500px;
+  p {
+    font-size: 1.2rem;
+    line-height: 2.25rem;
+    margin-top: 1.5rem;
+  }
+  .lista {
+    font-size: 20px;
+    padding-top: 10px;
+    display: flex;
+    padding-left: 0px;
+    line-height: 30px;
+    li::before {
+      content: "◉";
+      width: 10px;
+      height: 10px;
+      padding-right: 10px;
+      color: rgb(252, 183, 9);
+    }
+    ul {
+      list-style: none;
+      width: 170px;
+    }
+  }
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    font-weight: 900;
+    margin-top: 2.5rem;
+  }
+  span {
+    color: var(--yellow-500);
+  }
+  .imageSintomas {
+    width: 500px;
+    height: 500px;
+    background-color: yellow;
+  }
+}
+@media (max-width: 700px) {
+  .sintomasDiv {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    height: 500px;
+    p {
+      font-size: 1.2rem;
+      line-height: 2.25rem;
+      margin-top: 1.5rem;
+    }
+    .lista {
+      font-size: 20px;
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0px;
+      line-height: 30px;
+      li::before {
+        content: "◉";
+        width: 10px;
+        height: 10px;
+        padding-right: 10px;
+        color: rgb(252, 183, 9);
+      }
+      ul {
+        list-style: none;
+        width: 170px;
+      }
+    }
+    h1 {
+      font-size: 3.5rem;
+      line-height: 4.5rem;
+      font-weight: 900;
+      margin-top: 2.5rem;
+    }
+    span {
+      color: var(--yellow-500);
+    }
+    .imageSintomas {
+      width: 500px;
+      height: 500px;
+      background-color: yellow;
+    }
+  }
+}
