@@ -1,8 +1,9 @@
 import * as S from "./styles";
+import Container from "./styles";
 import Image from "next/image";
 export default function Precaution() {
   return (
-    <S.Container>
+    <Container>
       <h1>Precauções</h1>
       <p>parar a propagação começa com você</p>
       <S.Content>
@@ -97,6 +98,6 @@ export default function Precaution() {
           />
         </div>
       </S.Content>
-    </S.Container>
+    </Container>
   );
 }
