@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +38,7 @@ export const Container = styled.section`
     }
   }
 `;
+export default Container;
 
 export const Content = styled.div`
   padding: 0px 20px;
