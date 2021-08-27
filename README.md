@@ -1,4 +1,4 @@
-# Money-Project 🦠
+# Covid-19-Project 🦠
 
 ### Projeto criado com ReactJS 
 
